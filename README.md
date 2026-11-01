@@ -27,3 +27,15 @@ http://localhost:4173/ を開きます。ビルドやAPIキーは不要です。
 ## 公開
 
 GitHub Pagesの公開元は `main` ブランチのルートです。`main` への更新がサイトに反映されます。
+
+## クーポン収集
+
+ファミマの公開クーポンを14件取り込む収集器を追加しました。
+
+```sh
+python3 scripts/collect-family-coupons.py
+python3 -m unittest discover -s tests
+```
+
+`coupon-feed.js`が更新されます。GitHubへpushするとPagesに反映されます。定期実行は未設定です。
+取得範囲と今後の拡張方針は [公式クーポンの取得方法](docs/coupon-acquisition.md) を参照してください。
