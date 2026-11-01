@@ -6,3 +6,4 @@
 .store-name-tooltip{white-space:nowrap!important;min-width:65px!important}.map-store-label{display:block;white-space:nowrap;max-width:160px}
 
 .map-panel.has-popup .map-reset,.map-panel.has-popup .map-location{display:none}
+.app-link{display:flex;justify-content:space-between;align-items:center;gap:8px;text-decoration:none;border:1px solid #d4e0d6;border-radius:5px;background:#f0f5f0;color:var(--green);font-size:11px;font-weight:500;padding:10px 11px;margin:0 0 12px;line-height:1.6}.app-link span{font-size:12px}.app-link:hover{background:#e8f0e8}.app-link:focus-visible{outline:2px solid var(--green);outline-offset:3px}.map-coupon-entry{border-top:1px solid var(--line);padding:8px 0}.map-coupon-entry .map-coupon{border:0;padding:0 0 7px}.map-coupon-entry .app-link{font-size:10px;padding:7px 8px;margin:0}.app-help{font-size:10px!important;line-height:1.8!important;color:#92998b!important;margin:5px 0 14px!important}dialog>.app-link{margin:15px 0}

@@ -89,5 +89,35 @@ window.COOPON_STORES = [
     "lat": 35.697628,
     "positionLabel": "東京都千代田区九段北一丁目９番５号",
     "checkedAt": "2026-11-01"
+  },
+  {
+    "id": "jonathan-kagurazaka",
+    "name": "ジョナサン 神楽坂駅前店",
+    "brand": "jonathan",
+    "category": "restaurant",
+    "address": "東京都新宿区矢来町109-2",
+    "hours": "7:00–23:00",
+    "url": "https://store-info.skylark.co.jp/jonathan/map/020372/",
+    "lat": 35.703735,
+    "lon": 139.733444,
+    "positionLabel": "東京都新宿区矢来町109番地",
+    "checkedAt": "2026-11-01",
+    "mapLabel": "ジョナサン 神楽坂",
+    "mapDirection": "right"
+  },
+  {
+    "id": "jonathan-suidobashi",
+    "name": "ジョナサン 水道橋店",
+    "brand": "jonathan",
+    "category": "restaurant",
+    "address": "東京都文京区本郷1-22-6",
+    "hours": "7:00–翌3:00",
+    "url": "https://store-info.skylark.co.jp/jonathan/map/020385/",
+    "lat": 35.705185,
+    "lon": 139.75499,
+    "positionLabel": "東京都文京区本郷一丁目22番6号",
+    "checkedAt": "2026-11-01",
+    "mapLabel": "ジョナサン 水道橋",
+    "mapDirection": "left"
   }
 ];

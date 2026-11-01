@@ -1,0 +1,25 @@
+const assert=require('node:assert/strict'),vm=require('node:vm'),fs=require('node:fs');
+const context={window:{}};
+for(const file of ['app-links.js','store-data.js','coupon-data.js','coupon-feed.js'])vm.runInNewContext(fs.readFileSync(file,'utf8'),context);
+const {COOPON_STORES:stores,COOPON_COUPONS:base,COOPON_FEED:feed,cooponAppDestination:destination}=context.window;
+const brands=new Set(stores.map(s=>s.brand));
+const matches=c=>brands.has(c.brand)||c.brands?.some(b=>brands.has(b));
+const items=[...feed.items,...base.items].filter(c=>matches(c)&&(!c.end||c.end>='2026-11-01'));
+assert.equal(stores.length,9);assert.equal(stores.filter(s=>s.category==='restaurant').length,3);
+assert.equal(items.length,36);assert.equal(items.filter(c=>c.category==='restaurant').length,13);
+assert.equal(items.filter(c=>c.source==='jonathanWarm').length,10);
+assert.equal(new Set(items.map(c=>c.id)).size,36);
+assert.equal(items.filter(c=>c.brand==='gusto'||c.brands?.includes('gusto')).length,2);
+for(const c of items){for(const ua of ['iPhone','Android','Desktop']){const link=destination(c.brand,ua);assert(link?.url.startsWith('https://'));assert(link.name);}}
+assert.equal(destination('jonathan','iPhone').url,'https://apps.apple.com/jp/app/id906930478');
+assert(destination('gusto','Android').url.includes('jp.co.skylark.app.gusto'));
+assert.equal(destination('family','iPhone').mode,'open');
+assert.equal(destination('seven','Android').mode,'open');
+assert.equal(destination('tullys','iPhone').mode,'store');
+assert.equal(destination('skylark','Desktop').mode,'web');
+assert.equal(destination('unknown','iPhone'),null);
+const passport=items.find(c=>c.id==='skylark-platinum-passport');assert.equal(passport.eligibility,'60歳以上');
+const source=fs.readFileSync('app.js','utf8');
+const rank=c=>c.warning?6:c.start&&c.start>'2026-11-01'?4:c.kind==='paper'?5:c.category==='restaurant'&&c.kind==='app'?0:c.kind==='receipt'?3:1;
+assert.equal(items.slice().sort((a,b)=>rank(a)-rank(b))[0].category,'restaurant');
+console.log('36 relevant coupons; 13 family-restaurant offers; official links for every displayed coupon across iOS/Android/desktop.');
