@@ -1,0 +1,93 @@
+window.COOPON_STORES = [
+  {
+    "id": "seven-masumoto",
+    "name": "セブン‐イレブン 飯田橋升本ビル店",
+    "brand": "seven",
+    "category": "convenience",
+    "address": "東京都新宿区揚場町1-21",
+    "hours": "営業時間は店舗で確認",
+    "url": "https://location.sevenbank.co.jp/sevenbank/spot/detail?code=0000007687&lang=ja",
+    "lon": 139.743454,
+    "lat": 35.701874,
+    "positionLabel": "東京都新宿区揚場町１番２１号",
+    "checkedAt": "2026-11-01"
+  },
+  {
+    "id": "doutor-ramla",
+    "name": "ドトールコーヒーショップ 飯田橋ラムラ店",
+    "brand": "doutor",
+    "category": "cafe",
+    "address": "東京都新宿区神楽河岸1-1 飯田橋セントラルプラザ2F",
+    "hours": "平日 7:30–21:00／土日祝 8:00–21:00",
+    "url": "https://shop.doutor.co.jp/doutor/spot/detail?code=1011984",
+    "lon": 139.743423,
+    "lat": 35.700947,
+    "positionLabel": "東京都新宿区神楽河岸１番",
+    "checkedAt": "2026-11-01"
+  },
+  {
+    "id": "family-plano",
+    "name": "ファミリーマート 飯田橋プラーノ店",
+    "brand": "family",
+    "category": "convenience",
+    "address": "東京都千代田区富士見2-7-2",
+    "hours": "7:00–23:00",
+    "url": "https://store.family.co.jp/points/23513",
+    "lon": 139.744965,
+    "lat": 35.700809,
+    "positionLabel": "東京都千代田区富士見二丁目７番",
+    "checkedAt": "2026-11-01"
+  },
+  {
+    "id": "family-north",
+    "name": "ファミリーマート 飯田橋駅北店",
+    "brand": "family",
+    "category": "convenience",
+    "address": "東京都新宿区新小川町1-16",
+    "hours": "24時間",
+    "url": "https://store.family.co.jp/points/23031",
+    "lon": 139.743912,
+    "lat": 35.704597,
+    "positionLabel": "東京都新宿区新小川町１番１６号",
+    "checkedAt": "2026-11-01"
+  },
+  {
+    "id": "tullys-garden",
+    "name": "タリーズコーヒー 飯田橋ガーデンエアタワー店",
+    "brand": "tullys",
+    "category": "cafe",
+    "address": "東京都千代田区飯田橋3-10-10 ガーデンエアタワー1F",
+    "hours": "平日 7:00–20:00／土日休み",
+    "url": "https://shop.tullys.co.jp/detail/1000113",
+    "lon": 139.74884,
+    "lat": 35.700706,
+    "positionLabel": "東京都千代田区飯田橋三丁目１０番１０号",
+    "checkedAt": "2026-11-01"
+  },
+  {
+    "id": "family-2",
+    "name": "ファミリーマート 飯田橋二丁目店",
+    "brand": "family",
+    "category": "convenience",
+    "address": "東京都千代田区飯田橋2-6-6",
+    "hours": "24時間",
+    "url": "https://store.family.co.jp/points/23711",
+    "lon": 139.749664,
+    "lat": 35.699051,
+    "positionLabel": "東京都千代田区飯田橋二丁目６番６号",
+    "checkedAt": "2026-11-01"
+  },
+  {
+    "id": "gusto-kudan",
+    "name": "ガスト 九段下店",
+    "brand": "gusto",
+    "category": "restaurant",
+    "address": "東京都千代田区九段北1-9-5 朝日九段マンションB",
+    "hours": "7:00–22:00",
+    "url": "https://store-info.skylark.co.jp/gusto/map/018895/",
+    "lon": 139.750626,
+    "lat": 35.697628,
+    "positionLabel": "東京都千代田区九段北一丁目９番５号",
+    "checkedAt": "2026-11-01"
+  }
+];
